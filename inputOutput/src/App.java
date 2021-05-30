@@ -14,7 +14,8 @@ public class App {
         
         Scanner input = new Scanner (System.in);
         int selection = 0;
-            
+        
+        // startup menu
         System.out.println("Welcome to password saver!");
         System.out.println("1. Write to file");
         System.out.println("2. Read from file");
@@ -30,7 +31,7 @@ public class App {
                
 
                     try {
-                        
+                        // creates writer function to save user input
                         BufferedWriter writer = new BufferedWriter(new FileWriter("info.txt"));
                         System.out.print("Enter website name: ");
                         website = input.next();
@@ -41,7 +42,9 @@ public class App {
                         System.out.print("Enter your password: ");
                         password = input.next();
                         writer.write("\n" + "Password: " + password);
+                        // if not close() program will not write any data
                         writer.close();
+                        // basic catch incase file cannot be found or opened
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
