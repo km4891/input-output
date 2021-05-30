@@ -26,13 +26,10 @@ public class App {
         
         switch (selection) {
 
-            case 1:
-                
-               
-
-                    try {
-                        // creates writer function to save user input
-                        BufferedWriter writer = new BufferedWriter(new FileWriter("info.txt"));
+            case 1:         
+                try {
+                    // creates writer function to save user input
+                    BufferedWriter writer = new BufferedWriter(new FileWriter("info.txt"));
                         System.out.print("Enter website name: ");
                         website = input.next();
                         writer.write("Website: " + website);
@@ -44,12 +41,11 @@ public class App {
                         writer.write("\n" + "Password: " + password);
                         // if not close() program will not write any data
                         writer.close();
-                        // basic catch incase file cannot be found or opened
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-
+                    // basic catch incase file cannot be found or opened
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                break;
         
             case 2:
                 try {
