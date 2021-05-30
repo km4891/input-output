@@ -15,7 +15,7 @@ public class App {
         Scanner input = new Scanner (System.in);
         int selection = 0;
             
-
+        
         System.out.println("1. Write to file");
         System.out.println("2. Read from file");
 
@@ -39,7 +39,7 @@ public class App {
                         writer.write("\n" + "Username: " + username);
                         System.out.print("Enter your password: ");
                         password = input.next();
-                        writer.write("\n" + "Password:" + password);
+                        writer.write("\n" + "Password: " + password);
                         writer.close();
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -51,7 +51,7 @@ public class App {
                 try {
                     BufferedReader reader = new BufferedReader(new FileReader("info.txt"));
                         String line;
-                        // read a line from the file and put it in the line variable
+                        // read a line from the file and put it in the line variable, once null it will break the while loop
                         while((line = reader.readLine()) != null)
                             System.out.println(line);
                         reader.close();
