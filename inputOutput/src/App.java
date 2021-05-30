@@ -15,9 +15,10 @@ public class App {
         Scanner input = new Scanner (System.in);
         int selection = 0;
             
-        
+        System.out.println("Welcome to password saver!");
         System.out.println("1. Write to file");
         System.out.println("2. Read from file");
+        System.out.print("Choose an option: ");
 
         selection =input.nextInt();
         String website, username, password;
